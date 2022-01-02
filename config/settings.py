@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_psychic',
+    'psycopg2',
     'bootstrap4',
 ]
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
