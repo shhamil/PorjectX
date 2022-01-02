@@ -1,7 +1,7 @@
-#! /bin/bash
+#!/bin/bash
 
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py loaddata extrasens.json
-python3 manage.py collectstatic --no-input
+python manage.py makemigrations --no-input
+python manage.py migrate --no-input
+python manage.py loaddata extrasens.json --no-input
+python manage.py collectstatic --no-input
 exec gunicorn config.wsgi:application -b 0.0.0.0:8000 --reload
