@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'xmendb',
         'USER': 'shamil',
         'PASSWORD': 'shamil1998',
-        'HOST': 'localhost',
+        'HOST': 'postgres',
         'PORT': 5432
     }
 }
