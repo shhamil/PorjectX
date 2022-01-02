@@ -78,12 +78,8 @@ EXTRASENS_GUESS = 'extrasens_guess'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'xmendb',
-        'USER': 'shamil',
-        'PASSWORD': 'shamil1998',
-        'HOST': 'postgres',
-        'PORT': 5432
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
