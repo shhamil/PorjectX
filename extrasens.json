@@ -1,0 +1,1 @@
+[{"model": "test_psychic.extrasens", "pk": 1, "fields": {"name": "Baba Vanga", "rating": 50}}, {"model": "test_psychic.extrasens", "pk": 2, "fields": {"name": "Notredame", "rating": 50}}]

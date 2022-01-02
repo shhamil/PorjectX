@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<ul class="list-group list-group-flush mb-3">
+    <li class="list-group-item">Имя экстрасенса - догадка экстрасенса</li>
+{% for item in extrasens_guesses %}
+       <li class="list-group-item">{{ item.ext_name }} - {{ item.ext_guess }}</li>
+{% endfor %}
+</ul>
+<form method="post">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Введите загаданое число" aria-label="Имя получателя" aria-describedby="basic-addon2" id="user_number" name="user_number"   >
+        <input type="submit" class="btn btn-dark mb-2">
+        </div>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+        <h1>Загадайте число</h1>
+        <a class="nav-link" href="{% url 'test_psychic:send_number' %}"><button type="submit" class="btn btn-dark mb-2">Ок</button></a>
+
+        <ul class="list-group list-group-flush mb-2">
+            <li class="list-group-item">Имя экстрасенса - рейтинг доверия</li>
+            {% for item in extrs %}
+                <li class="list-group-item">{{ item.name }} - {{ item.rating }}</li>
+            {% endfor %}
+        </ul>
+        <table class="table">
+          <thead>
+           <tr>
+             <th>№</th>
+             <th>Ввод пользователя</th>
+             <th>Имя экстрасенса</th>
+             <th>Догадка экстрасенса</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for log in logs %}
+                        <tr>
+                        <th>{{ log.attempt }}</th>
+                        <th>{{ log.user_number }}</th>
+                        <th>{{ log.ext_name }}</th>
+                        <th>{{ log.guess }}</th>
+                        </tr>
+                {% endfor %}
+          </tbody>
+        </table>
+{% endblock %}
