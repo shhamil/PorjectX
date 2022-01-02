@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$ac_)0o2mf3*slljoh1_f(g6_y5q0e7pzz=wehr2kxa(x7^&p+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['89.108.81.51', 'sshoma.ru', 'web']
+ALLOWED_HOSTS = ['89.108.81.51', 'sshoma.ru', 'web', '127.0.0.1']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'xmendb',
         'USER': 'shamil',
         'PASSWORD': 'shamil1998',
-        'HOST': 'postgres',
+        'HOST': 'localhost',
         'PORT': 5432
     }
 }
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-CSRF_TRUSTED_ORIGINS = ['sshoma.ru']
+CSRF_TRUSTED_ORIGINS = ['http://sshoma.ru']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
