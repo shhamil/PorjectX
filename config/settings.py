@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_psychic',
+    'rest_framework',
     'psycopg2',
     'bootstrap4',
 ]
@@ -71,22 +72,28 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+EXTRASENS = 'extrasens'
 GUESSES_LOG = 'guesses_log'
 EXTRASENS_GUESS = 'extrasens_guess'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'xmendb',
+#         'USER': 'shamil',
+#         'PASSWORD': 'shamil1998',
+#         'HOST': 'postgres',
+#         'PORT': 5432
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'xmendb',
-        'USER': 'shamil',
-        'PASSWORD': 'shamil1998',
-        'HOST': 'postgres',
-        'PORT': 5432
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
